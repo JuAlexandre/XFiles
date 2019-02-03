@@ -1,5 +1,7 @@
-<?php require('inc/functions.php'); ?>
 <?php
+
+require('inc/functions.php');
+
 if (isset($_POST['content'])) {
     $file = $_GET['file'];
     $fileHandle = fopen($file, 'w');

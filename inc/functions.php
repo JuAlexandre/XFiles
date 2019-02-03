@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @param $directory
+ */
 function listDirectory($directory)
 {
     if (is_dir($directory)) {
@@ -11,11 +14,11 @@ function listDirectory($directory)
                 }
                 else {
                     if (is_dir("$directory/$file")) {
-                        echo "<li>$file <a href='?delete=$directory/$file'><img class='delete' src='../assets/images/delete.png'></a></li>";
+                        echo "<li>$file <a href='?delete=$directory/$file'><img class='delete' src='../assets/images/delete.png' alt='delete'></a></li>";
                         listDirectory("$directory/$file");
                     }
                     else {
-                        echo "<li><a href='?file=$directory/$file'>$file</a> <a href='?delete=$directory/$file'><img class='delete' src='../assets/images/delete.png'></a></li>";
+                        echo "<li><a href='?file=$directory/$file'>$file</a> <a href='?delete=$directory/$file'><img class='delete' src='../assets/images/delete.png' alt='delete'></a></li>";
                     }
                 }
             }
@@ -27,6 +30,10 @@ function listDirectory($directory)
     }
 }
 
+/**
+ * @param $directory
+ * @return bool
+ */
 function deleteDirectory($directory)
 {
     if (is_dir($directory))
