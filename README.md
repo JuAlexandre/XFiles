@@ -1,10 +1,24 @@
-# Quête : Manipuler les fichiers avec PHP
+# x-files
 
-Création d'un gestionnaire de fichiers.
+## Instructions
 
-## Critères de validation
-* L'application permet de :
-* Lister dynamiquement les répertoires et fichiers contenus dans /files,
-* Supprimer un fichier ou un répertoire,
-* Éditer un fichier texte (.txt/.html),
-* L'ensemble de ton code est disponible sur un dépot Github.
+Creating a simple file manager.
+
+The application allows you to:
+
+* Dynamically list the directories and files contained in `/files` folder.
+
+* Delete a file or folder. If the folder contains files, everything is deleted.
+
+* Edit a text or HTML file.
+
+## Installation
+
+```
+git clone https://github.com/JuAlexandre/x-files.git
+```
+
+Launch the PHP server in `x-files` folder :
+```
+php -S localhost:8000
+```
